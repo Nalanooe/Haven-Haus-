@@ -90,7 +90,7 @@
     .logo-icon {
         width: 2.5rem;
         height: 2.5rem;
-        background-color: var(--sage);
+        background: linear-gradient(135deg, #6B8E6B 0%, #5a7a5a 100%);
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -98,7 +98,6 @@
         color: white;
         font-size: 1.5rem;
         flex-shrink: 0;
-        background: linear-gradient(135deg, #6B8E6B 0%, #5a7a5a 100%);
     }
 
     .logo-text {
@@ -143,6 +142,7 @@
         display: inline-block;
         text-align: center;
         font-size: 1rem;
+        font-family: 'Inter', sans-serif;
     }
 
     .btn-primary:hover {
@@ -178,57 +178,6 @@
 
     .btn-secondary:active {
         transform: scale(0.98);
-    }
-
-    #whatsappBtn {
-        border-color: #6B8E6B !important;
-        color: #6B8E6B !important;
-        background-color: transparent !important;
-    }
-
-    #whatsappBtn:hover {
-        background-color: #6B8E6B !important;
-        color: white !important;
-    }
-
-    .whatsapp-contact-btn {
-        width: 100%;
-        padding: 0.75rem 2rem;
-        background-color: #6B8E6B !important;
-        color: white !important;
-        border: none !important;
-        border-radius: 0.5rem;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.3s;
-        font-size: 1rem;
-        font-family: 'Inter', sans-serif;
-    }
-
-    .whatsapp-contact-btn:hover {
-        opacity: 0.9;
-        box-shadow: 0 10px 25px rgba(107, 142, 107, 0.2);
-        transform: scale(1.02);
-    }
-
-    .whatsapp-contact-btn:active {
-        transform: scale(0.98);
-    }
-
-    .footer-whatsapp-btn {
-        background: none;
-        border: none;
-        color: #bbb;
-        text-decoration: none;
-        cursor: pointer;
-        padding: 0;
-        font-size: 0.875rem;
-        font-family: inherit;
-        transition: color 0.3s;
-    }
-
-    .footer-whatsapp-btn:hover {
-        color: #6B8E6B !important;
     }
 
     /* Hero Section */
@@ -367,46 +316,6 @@
         }
     }
 
-    /* Trust Section */
-    .trust-section {
-        background-color: white;
-        border-top: 1px solid rgba(107, 142, 107, 0.2);
-        border-bottom: 1px solid rgba(107, 142, 107, 0.2);
-        padding: 2rem 1rem;
-    }
-
-    .trust-content {
-        max-width: 90rem;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    @media (min-width: 768px) {
-        .trust-content {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
-
-    .trust-stat {
-        text-align: center;
-        padding: 2rem 1rem;
-    }
-
-    .trust-stat-number {
-        font-size: clamp(2rem, 6vw, 2.25rem);
-        font-family: 'Playfair Display', serif;
-        font-weight: 600;
-        color: var(--sage);
-        margin-bottom: 0.5rem;
-    }
-
-    .trust-stat-text {
-        color: #666;
-        font-size: 0.875rem;
-    }
-
     /* Services Section */
     .services {
         padding: 3rem 1rem;
@@ -471,10 +380,51 @@
         text-decoration: none;
         font-weight: 500;
         transition: all 0.3s;
+        cursor: pointer;
     }
 
     .service-card a:hover {
         text-decoration: underline;
+    }
+
+    /* Trust Section */
+    .trust-section {
+        background-color: white;
+        border-top: 1px solid rgba(107, 142, 107, 0.2);
+        border-bottom: 1px solid rgba(107, 142, 107, 0.2);
+        padding: 2rem 1rem;
+    }
+
+    .trust-content {
+        max-width: 90rem;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+        .trust-content {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .trust-stat {
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .trust-stat-number {
+        font-size: clamp(2rem, 6vw, 2.25rem);
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+        color: var(--sage);
+        margin-bottom: 0.5rem;
+    }
+
+    .trust-stat-text {
+        color: #666;
+        font-size: 0.875rem;
     }
 
     /* About Section */
@@ -726,6 +676,7 @@
         text-decoration: none;
         display: inline-block;
         font-size: 1rem;
+        font-family: 'Inter', sans-serif;
     }
 
     .cta-button:hover {
@@ -735,76 +686,6 @@
 
     .cta-button:active {
         transform: scale(0.98);
-    }
-
-    /* Footer */
-    footer {
-        background-color: var(--dark);
-        color: white;
-        padding: 2rem 1rem;
-    }
-
-    .footer-container {
-        max-width: 90rem;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    @media (min-width: 768px) {
-        .footer-container {
-            grid-template-columns: repeat(4, 1fr);
-        }
-    }
-
-    .footer-section h3 {
-        font-size: 1rem;
-        margin-bottom: 1rem;
-        color: white;
-    }
-
-    .footer-section p,
-    .footer-section ul {
-        font-size: 0.875rem;
-        color: #bbb;
-        line-height: 1.8;
-    }
-
-    .footer-section ul {
-        list-style: none;
-    }
-
-    .footer-section a {
-        color: #bbb;
-        text-decoration: none;
-        transition: color 0.3s;
-    }
-
-    .footer-section a:hover {
-        color: var(--sage);
-    }
-
-    .footer-bottom {
-        border-top: 1px solid #555;
-        padding-top: 2rem;
-        margin-top: 2rem;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    @media (min-width: 768px) {
-        .footer-bottom {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-        }
-    }
-
-    .footer-bottom p {
-        font-size: 0.875rem;
-        color: #999;
     }
 
     /* Contact Form Styles */
@@ -892,6 +773,7 @@
         cursor: pointer;
         transition: all 0.3s;
         font-size: 1rem;
+        font-family: 'Inter', sans-serif;
     }
 
     .form-submit:hover {
@@ -916,6 +798,105 @@
 
     .success-message.show {
         display: block;
+    }
+
+    /* WhatsApp Button Styles */
+    .whatsapp-btn {
+        background-color: var(--sage);
+        color: white;
+        border: none;
+        width: 100%;
+    }
+
+    .whatsapp-btn:hover {
+        opacity: 0.9;
+        box-shadow: 0 10px 25px rgba(107, 142, 107, 0.2);
+    }
+
+    .footer-whatsapp-btn {
+        background: none;
+        border: none;
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+        padding: 0;
+        font-size: 0.875rem;
+        font-family: inherit;
+        transition: color 0.3s;
+    }
+
+    .footer-whatsapp-btn:hover {
+        color: var(--sage);
+    }
+
+    /* Footer */
+    footer {
+        background-color: var(--dark);
+        color: white;
+        padding: 2rem 1rem;
+    }
+
+    .footer-container {
+        max-width: 90rem;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+        .footer-container {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    .footer-section h3 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        color: white;
+    }
+
+    .footer-section p,
+    .footer-section ul {
+        font-size: 0.875rem;
+        color: #bbb;
+        line-height: 1.8;
+    }
+
+    .footer-section ul {
+        list-style: none;
+    }
+
+    .footer-section a {
+        color: #bbb;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .footer-section a:hover {
+        color: var(--sage);
+    }
+
+    .footer-bottom {
+        border-top: 1px solid #555;
+        padding-top: 2rem;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+        .footer-bottom {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .footer-bottom p {
+        font-size: 0.875rem;
+        color: #999;
     }
 
     /* Animations */
@@ -977,15 +958,11 @@
 
 </head>
 <body>
-    <!-- ========================================
-         CONTACT INFORMATION - UPDATE ONLY HERE!
-         ======================================== -->
     <script>
-        // UPDATE YOUR INFORMATION HERE (Only place you need to change!)
         const CONTACT_INFO = {
-            whatsappNumber: '27665591392',  // Just the numbers, no spaces or +
+            whatsappNumber: '27665591392',
             email: 'info@havenhausco.co.za',
-            formEmail: 'info@havenhausco.co.za'  // Where form submissions go
+            formEmail: 'info@havenhausco.co.za'
         };
     </script>
 
@@ -1058,21 +1035,21 @@
                 <h3>Essential Turnover Clean</h3>
                 <div class="price">From R500</div>
                 <p>Routine guest turnover cleaning with guest-ready finishing touches.</p>
-                <a href="#contact">Learn more →</a>
+                <a href="#contact" onclick="selectService('essential')">Learn more →</a>
             </div>
 
             <div class="service-card">
                 <h3>Premium Refresh Clean</h3>
                 <div class="price">From R900</div>
                 <p>Enhanced detailing with appliance sanitisation and deeper kitchen work.</p>
-                <a href="#contact">Learn more →</a>
+                <a href="#contact" onclick="selectService('premium')">Learn more →</a>
             </div>
 
             <div class="service-card">
                 <h3>Signature Deep Clean</h3>
                 <div class="price">From R1500</div>
                 <p>Comprehensive property reset and luxury restoration for premium properties.</p>
-                <a href="#contact">Learn more →</a>
+                <a href="#contact" onclick="selectService('deep')">Learn more →</a>
             </div>
         </div>
 
@@ -1261,7 +1238,7 @@
 
             <div class="contact-info-item">
                 <h4>WhatsApp</h4>
-                <button id="whatsappBtnContact" class="whatsapp-contact-btn" type="button">Message on WhatsApp</button>
+                <button id="whatsappBtnContact" class="btn-primary whatsapp-btn" type="button">Message on WhatsApp</button>
             </div>
 
             <div class="contact-info-item">
@@ -1338,14 +1315,14 @@
 </footer>
 
 <script>
-    // ========================================
-    // INITIALIZATION - Sets up all links
-    // ========================================
+    function selectService(serviceType) {
+        document.getElementById('service').value = serviceType;
+        document.getElementById('contactForm').scrollIntoView({ behavior: 'smooth' });
+    }
+
     function initializeWebsite() {
-        // Set WhatsApp functionality
         const whatsappUrl = `https://wa.me/${CONTACT_INFO.whatsappNumber}`;
         
-        // WhatsApp buttons
         const whatsappButtons = [
             document.getElementById('whatsappBtn'),
             document.getElementById('whatsappBtnContact'),
@@ -1361,7 +1338,6 @@
             }
         });
 
-        // Set email links
         const emailUrl = `mailto:${CONTACT_INFO.email}`;
         const emailLink = document.getElementById('emailLink');
         const emailLinkFooter = document.getElementById('emailLinkFooter');
@@ -1370,9 +1346,6 @@
         if (emailLinkFooter) emailLinkFooter.href = emailUrl;
     }
 
-    // ========================================
-    // FORM SUBMISSION
-    // ========================================
     document.getElementById('contactForm').addEventListener('submit', function(e) {
         e.preventDefault();
         
@@ -1382,30 +1355,22 @@
         const service = document.getElementById('service').value;
         const message = document.getElementById('message').value;
         
-        // Create mailto link with form data
         const subject = `New Quote Request from ${name}`;
         const body = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AService: ${service}%0A%0AMessage:%0A${message}`;
-        const mailtoUrl = `mailto:${CONTACT_INFO.formEmail}?subject=${subject}&body=${body}`;
+        const mailtoUrl = `mailto:${CONTACT_INFO.formEmail}?subject=${encodeURIComponent(subject)}&body=${body}`;
         
-        // Open email client
         window.location.href = mailtoUrl;
         
-        // Show success message
         const successMessage = document.getElementById('successMessage');
         successMessage.classList.add('show');
         
-        // Reset form
         this.reset();
         
-        // Hide success message after 5 seconds
         setTimeout(() => {
             successMessage.classList.remove('show');
         }, 5000);
     });
 
-    // ========================================
-    // SMOOTH SCROLL
-    // ========================================
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
@@ -1422,9 +1387,6 @@
         });
     });
 
-    // ========================================
-    // INITIALIZE ON PAGE LOAD
-    // ========================================
     document.addEventListener('DOMContentLoaded', function() {
         initializeWebsite();
     });
