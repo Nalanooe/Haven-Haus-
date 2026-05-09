@@ -98,6 +98,7 @@
         color: white;
         font-size: 1.5rem;
         flex-shrink: 0;
+        background: linear-gradient(135deg, #6B8E6B 0%, #5a7a5a 100%);
     }
 
     .logo-text {
@@ -167,6 +168,7 @@
         display: inline-block;
         text-align: center;
         font-size: 1rem;
+        font-family: 'Inter', sans-serif;
     }
 
     .btn-secondary:hover {
@@ -176,6 +178,58 @@
 
     .btn-secondary:active {
         transform: scale(0.98);
+    }
+
+    #whatsappBtnContact {
+        background-color: var(--sage) !important;
+        color: white !important;
+        border-color: var(--sage) !important;
+    }
+
+    #whatsappBtn {
+        border-color: var(--sage);
+        color: var(--sage);
+        background-color: transparent;
+    }
+
+    .whatsapp-contact-btn {
+        width: 100%;
+        padding: 0.75rem 2rem;
+        background-color: var(--sage);
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-size: 1rem;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .whatsapp-contact-btn:hover {
+        opacity: 0.9;
+        box-shadow: 0 10px 25px rgba(107, 142, 107, 0.2);
+        transform: scale(1.02);
+    }
+
+    .whatsapp-contact-btn:active {
+        transform: scale(0.98);
+    }
+
+    .footer-whatsapp-btn {
+        background: none;
+        border: none;
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+        padding: 0;
+        font-size: 0.875rem;
+        font-family: inherit;
+        transition: color 0.3s;
+    }
+
+    .footer-whatsapp-btn:hover {
+        color: var(--sage);
     }
 
     /* Hero Section */
@@ -1064,7 +1118,7 @@
 
             <div class="contact-info-item">
                 <h4>WhatsApp</h4>
-                <button id="whatsappBtnContact" class="btn-secondary" type="button" style="width: 100%;">Message on WhatsApp</button>
+                <button id="whatsappBtnContact" class="whatsapp-contact-btn" type="button">Message on WhatsApp</button>
             </div>
 
             <div class="contact-info-item">
@@ -1124,7 +1178,7 @@
         <div class="footer-section">
             <h3>Contact</h3>
             <ul>
-                <li><button id="whatsappBtnFooter" type="button" style="background: none; border: none; color: #bbb; text-decoration: none; cursor: pointer; padding: 0; font-size: 0.875rem;">WhatsApp</button></li>
+                <li><button id="whatsappBtnFooter" type="button" class="footer-whatsapp-btn">WhatsApp</button></li>
                 <li><a id="emailLinkFooter" href="mailto:info@havenhausco.co.za">Email</a></li>
                 <li><p style="margin: 0;">Cape Town, South Africa</p></li>
             </ul>
