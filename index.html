@@ -1300,40 +1300,42 @@
         });
     });
 
-    // Initialize on page load
-    window.addEventListener('load', initializeWebsite);
-    
-    // Also run immediately in case DOMContentLoaded already fired
-    if (document.readyState !== 'loading') {
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initializeWebsite);
+    } else {
         initializeWebsite();
     }
 
     // ========================================
     // CONTACT FORM HANDLER
     // ========================================
-    document.getElementById('contactForm')?.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            phone: document.getElementById('phone').value,
-            service: document.getElementById('service').value,
-            message: document.getElementById('message').value
-        };
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value
+            };
 
-        // Show success message
-        const successMessage = document.getElementById('successMessage');
-        successMessage.classList.add('show');
+            // Show success message
+            const successMessage = document.getElementById('successMessage');
+            successMessage.classList.add('show');
 
-        // Reset form
-        this.reset();
+            // Reset form
+            this.reset();
 
-        // Hide success message after 5 seconds
-        setTimeout(() => {
-            successMessage.classList.remove('show');
-        }, 5000);
-    });
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMessage.classList.remove('show');
+            }, 5000);
+        });
+    }
 </script>
 ```
 
