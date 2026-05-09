@@ -130,54 +130,61 @@
     }
 
     .btn-primary {
-        padding: 0.75rem 2rem;
+        padding: 0.875rem 2.25rem;
         background-color: var(--sage);
         color: white;
         border: none;
         border-radius: 0.5rem;
-        font-weight: 500;
+        font-weight: 600;
         cursor: pointer;
-        transition: all 0.3s;
+        transition: all 0.3s ease;
         text-decoration: none;
         display: inline-block;
         text-align: center;
         font-size: 1rem;
         font-family: 'Inter', sans-serif;
+        box-shadow: 0 4px 12px rgba(107, 142, 107, 0.25);
+        letter-spacing: 0.3px;
     }
 
     .btn-primary:hover {
-        opacity: 0.9;
-        box-shadow: 0 10px 25px rgba(107, 142, 107, 0.2);
-        transform: scale(1.05);
+        background-color: #5a7a5a;
+        opacity: 1;
+        box-shadow: 0 8px 20px rgba(107, 142, 107, 0.35);
+        transform: translateY(-2px);
     }
 
     .btn-primary:active {
-        transform: scale(0.98);
+        transform: translateY(0);
+        box-shadow: 0 2px 8px rgba(107, 142, 107, 0.25);
     }
 
     .btn-secondary {
-        padding: 0.75rem 2rem;
-        border: 2px solid var(--sage);
+        padding: 0.875rem 2.25rem;
+        border: 2.5px solid var(--sage);
         color: var(--sage);
         background-color: transparent;
         border-radius: 0.5rem;
-        font-weight: 500;
+        font-weight: 600;
         cursor: pointer;
-        transition: all 0.3s;
+        transition: all 0.3s ease;
         text-decoration: none;
         display: inline-block;
         text-align: center;
         font-size: 1rem;
         font-family: 'Inter', sans-serif;
+        letter-spacing: 0.3px;
     }
 
     .btn-secondary:hover {
         background-color: var(--sage);
         color: white;
+        box-shadow: 0 4px 12px rgba(107, 142, 107, 0.25);
+        transform: translateY(-2px);
     }
 
     .btn-secondary:active {
-        transform: scale(0.98);
+        transform: translateY(0);
     }
 
     /* Hero Section */
@@ -222,7 +229,7 @@
     .hero-buttons {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.25rem;
         margin-bottom: 2rem;
         max-width: 25rem;
     }
@@ -230,6 +237,7 @@
     @media (min-width: 640px) {
         .hero-buttons {
             flex-direction: row;
+            gap: 1rem;
         }
     }
 
@@ -665,27 +673,30 @@
     }
 
     .cta-button {
-        padding: 0.75rem 2rem;
+        padding: 0.875rem 2.5rem;
         background-color: white;
         color: var(--sage);
         border: none;
         border-radius: 0.5rem;
-        font-weight: 600;
+        font-weight: 700;
         cursor: pointer;
-        transition: all 0.3s;
+        transition: all 0.3s ease;
         text-decoration: none;
         display: inline-block;
-        font-size: 1rem;
+        font-size: 1.05rem;
         font-family: 'Inter', sans-serif;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        letter-spacing: 0.3px;
     }
 
     .cta-button:hover {
-        background-color: rgba(255, 255, 255, 0.9);
-        transform: scale(1.05);
+        background-color: #f5f5f5;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
 
     .cta-button:active {
-        transform: scale(0.98);
+        transform: translateY(0);
     }
 
     /* Contact Form Styles */
@@ -743,11 +754,13 @@
     .form-input,
     .form-select,
     .form-textarea {
-        padding: 0.75rem;
-        border: 1px solid #ddd;
+        padding: 0.875rem;
+        border: 1.5px solid #e0e0e0;
         border-radius: 0.5rem;
         font-family: inherit;
         font-size: 1rem;
+        transition: all 0.3s ease;
+        background-color: #fafafa;
     }
 
     .form-input:focus,
@@ -755,45 +768,53 @@
     .form-textarea:focus {
         outline: none;
         border-color: var(--sage);
-        box-shadow: 0 0 0 3px rgba(107, 142, 107, 0.1);
+        background-color: white;
+        box-shadow: 0 0 0 4px rgba(107, 142, 107, 0.1);
     }
 
     .form-textarea {
         resize: vertical;
+        font-family: 'Inter', sans-serif;
     }
 
     .form-submit {
         width: 100%;
-        padding: 0.75rem;
+        padding: 0.875rem;
         background-color: var(--sage);
         color: white;
         border: none;
         border-radius: 0.5rem;
-        font-weight: 600;
+        font-weight: 700;
         cursor: pointer;
-        transition: all 0.3s;
-        font-size: 1rem;
+        transition: all 0.3s ease;
+        font-size: 1.05rem;
         font-family: 'Inter', sans-serif;
+        letter-spacing: 0.3px;
+        box-shadow: 0 4px 12px rgba(107, 142, 107, 0.25);
     }
 
     .form-submit:hover {
-        opacity: 0.9;
-        box-shadow: 0 10px 25px rgba(107, 142, 107, 0.2);
+        background-color: #5a7a5a;
+        box-shadow: 0 8px 20px rgba(107, 142, 107, 0.35);
+        transform: translateY(-2px);
     }
 
     .form-submit:active {
-        transform: scale(0.98);
+        transform: translateY(0);
+        box-shadow: 0 2px 8px rgba(107, 142, 107, 0.25);
     }
 
     .success-message {
         display: none;
-        background-color: #d4edda;
+        background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
         color: #155724;
-        padding: 1rem;
+        padding: 1.25rem;
         border-radius: 0.5rem;
         text-align: center;
-        margin-top: 1rem;
-        border: 1px solid #c3e6cb;
+        margin-top: 1.5rem;
+        border: 1.5px solid #a8d8a8;
+        font-weight: 500;
+        animation: slideUp 0.4s ease-out;
     }
 
     .success-message.show {
@@ -806,11 +827,18 @@
         color: white;
         border: none;
         width: 100%;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(107, 142, 107, 0.25);
     }
 
     .whatsapp-btn:hover {
-        opacity: 0.9;
-        box-shadow: 0 10px 25px rgba(107, 142, 107, 0.2);
+        background-color: #5a7a5a;
+        box-shadow: 0 8px 20px rgba(107, 142, 107, 0.35);
+        transform: translateY(-2px);
+    }
+
+    .whatsapp-btn:active {
+        transform: translateY(0);
     }
 
     .footer-whatsapp-btn {
@@ -897,6 +925,26 @@
     .footer-bottom p {
         font-size: 0.875rem;
         color: #999;
+    }
+
+    /* Focus and Touch States */
+    .btn-primary:focus,
+    .btn-secondary:focus,
+    .cta-button:focus,
+    .form-submit:focus,
+    .whatsapp-btn:focus {
+        outline: 2px solid var(--sage);
+        outline-offset: 2px;
+    }
+
+    @media (hover: none) {
+        .btn-primary:active,
+        .btn-secondary:active,
+        .cta-button:active,
+        .form-submit:active,
+        .whatsapp-btn:active {
+            opacity: 0.85;
+        }
     }
 
     /* Animations */
