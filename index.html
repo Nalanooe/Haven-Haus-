@@ -73,7 +73,7 @@
     .nav-container {
         max-width: 90rem;
         margin: 0 auto;
-        padding: 1rem;
+        padding: 1rem 1rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -90,7 +90,7 @@
     .logo-icon {
         width: 2.5rem;
         height: 2.5rem;
-        background: linear-gradient(135deg, #6B8E6B 0%, #5a7a5a 100%);
+        background-color: var(--sage);
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -129,71 +129,63 @@
         }
     }
 
-    /* Button Styles */
-    .btn {
-        padding: 0.875rem 2rem;
+    .btn-primary {
+        padding: 0.75rem 2rem;
+        background-color: var(--sage);
+        color: white;
+        border: none;
         border-radius: 0.5rem;
-        font-weight: 600;
+        font-weight: 500;
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: all 0.3s;
         text-decoration: none;
         display: inline-block;
         text-align: center;
         font-size: 1rem;
-        font-family: 'Inter', sans-serif;
-        border: none;
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-    }
-
-    .btn-primary {
-        background-color: var(--sage);
-        color: white;
-        box-shadow: 0 4px 12px rgba(107, 142, 107, 0.25);
     }
 
     .btn-primary:hover {
-        background-color: #5a7a5a;
-        box-shadow: 0 8px 20px rgba(107, 142, 107, 0.35);
-        transform: translateY(-2px);
+        opacity: 0.9;
+        box-shadow: 0 10px 25px rgba(107, 142, 107, 0.2);
+        transform: scale(1.05);
     }
 
     .btn-primary:active {
-        transform: translateY(0);
+        transform: scale(0.98);
     }
 
     .btn-secondary {
-        background-color: transparent;
+        padding: 0.75rem 2rem;
+        border: 2px solid var(--sage);
         color: var(--sage);
-        border: 2.5px solid var(--sage);
+        background-color: transparent;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        font-size: 1rem;
     }
 
     .btn-secondary:hover {
         background-color: var(--sage);
         color: white;
-        box-shadow: 0 4px 12px rgba(107, 142, 107, 0.25);
-        transform: translateY(-2px);
     }
 
     .btn-secondary:active {
-        transform: translateY(0);
-    }
-
-    .btn:focus {
-        outline: 2px solid var(--sage);
-        outline-offset: 2px;
+        transform: scale(0.98);
     }
 
     /* Hero Section */
     .hero {
-        background: linear-gradient(135deg, rgba(107, 142, 107, 0.02) 0%, rgba(107, 142, 107, 0.01) 100%);
+        background: linear-gradient(135deg, rgba(107, 142, 107, 0.05) 0%, rgba(107, 142, 107, 0.02) 100%);
         min-height: 100vh;
         display: flex;
         align-items: center;
         padding: 2rem 1rem;
         padding-top: 4rem;
-        background-color: #FAFAF8;
     }
 
     .hero-container {
@@ -229,25 +221,24 @@
         flex-direction: column;
         gap: 1rem;
         margin-bottom: 2rem;
-        max-width: 100%;
+        max-width: 25rem;
     }
 
     @media (min-width: 640px) {
         .hero-buttons {
             flex-direction: row;
-            gap: 1rem;
-            max-width: 32rem;
         }
     }
 
-    .hero-buttons .btn {
+    .hero-buttons a,
+    .hero-buttons button {
         width: 100%;
     }
 
     @media (min-width: 640px) {
-        .hero-buttons .btn {
+        .hero-buttons a,
+        .hero-buttons button {
             width: auto;
-            flex: 1;
         }
     }
 
@@ -322,10 +313,49 @@
         }
     }
 
+    /* Trust Section */
+    .trust-section {
+        background-color: white;
+        border-top: 1px solid rgba(107, 142, 107, 0.2);
+        border-bottom: 1px solid rgba(107, 142, 107, 0.2);
+        padding: 2rem 1rem;
+    }
+
+    .trust-content {
+        max-width: 90rem;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+        .trust-content {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .trust-stat {
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    .trust-stat-number {
+        font-size: clamp(2rem, 6vw, 2.25rem);
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+        color: var(--sage);
+        margin-bottom: 0.5rem;
+    }
+
+    .trust-stat-text {
+        color: #666;
+        font-size: 0.875rem;
+    }
+
     /* Services Section */
     .services {
         padding: 3rem 1rem;
-        background-color: white;
     }
 
     .services-container {
@@ -386,141 +416,10 @@
         text-decoration: none;
         font-weight: 500;
         transition: all 0.3s;
-        cursor: pointer;
     }
 
     .service-card a:hover {
         text-decoration: underline;
-    }
-
-    /* Trust Section */
-    .trust-section {
-        background-color: white;
-        border-top: 1px solid rgba(107, 142, 107, 0.2);
-        border-bottom: 1px solid rgba(107, 142, 107, 0.2);
-        padding: 2rem 1rem;
-    }
-
-    .trust-content {
-        max-width: 90rem;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    @media (min-width: 768px) {
-        .trust-content {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
-
-    .trust-stat {
-        text-align: center;
-        padding: 2rem 1rem;
-    }
-
-    .trust-stat-number {
-        font-size: clamp(2rem, 6vw, 2.25rem);
-        font-family: 'Playfair Display', serif;
-        font-weight: 600;
-        color: var(--sage);
-        margin-bottom: 0.5rem;
-    }
-
-    .trust-stat-text {
-        color: #666;
-        font-size: 0.875rem;
-    }
-
-    /* About Section */
-    .about {
-        padding: 3rem 1rem;
-        background-color: var(--cream);
-    }
-
-    .about-container {
-        max-width: 90rem;
-        margin: 0 auto;
-    }
-
-    .about h2 {
-        text-align: center;
-        color: var(--dark);
-    }
-
-    .about-content {
-        background: white;
-        border-radius: 0.5rem;
-        padding: 2.5rem;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        margin-bottom: 3rem;
-    }
-
-    .about-content p {
-        color: #666;
-        margin-bottom: 1rem;
-        line-height: 1.8;
-        font-size: 1rem;
-    }
-
-    .about-content p:last-child {
-        margin-bottom: 0;
-    }
-
-    /* About Owner Section */
-    .about-owner {
-        margin-top: 2rem;
-    }
-
-    .about-owner h3 {
-        text-align: center;
-        color: var(--dark);
-        margin-bottom: 2rem;
-    }
-
-    .owner-card {
-        background: white;
-        border-radius: 0.5rem;
-        padding: 2.5rem;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    }
-
-    .owner-credentials {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    @media (min-width: 768px) {
-        .owner-credentials {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
-
-    .credential {
-        border-left: 4px solid var(--sage);
-        padding-left: 1.5rem;
-    }
-
-    .credential h4 {
-        color: var(--dark);
-        margin-bottom: 0.5rem;
-    }
-
-    .credential p {
-        color: #666;
-        font-size: 0.875rem;
-        line-height: 1.6;
-        margin: 0;
-    }
-
-    .credential-title {
-        color: var(--sage);
-        font-weight: 600;
-        font-size: 0.95rem;
-        display: block;
-        margin-bottom: 0.25rem;
     }
 
     /* Why Choose Section */
@@ -588,7 +487,6 @@
     /* Testimonials Section */
     .testimonials {
         padding: 3rem 1rem;
-        background-color: var(--cream);
     }
 
     .testimonials-container {
@@ -670,131 +568,27 @@
         line-height: 1.8;
     }
 
-    .cta .btn-primary {
+    .cta-button {
+        padding: 0.75rem 2rem;
         background-color: white;
         color: var(--sage);
-    }
-
-    .cta .btn-primary:hover {
-        background-color: #f5f5f5;
-        color: var(--sage);
-    }
-
-    /* Contact Form Styles */
-    .contact-section {
-        background-color: white;
-        padding: 3rem 1rem;
-    }
-
-    .contact-container {
-        max-width: 32rem;
-        margin: 0 auto;
-    }
-
-    .contact-info-box {
-        background: white;
-        border-radius: 0.5rem;
-        padding: 2rem;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        margin-bottom: 2rem;
-    }
-
-    .contact-info-item {
-        margin-bottom: 2rem;
-    }
-
-    .contact-info-item:last-child {
-        margin-bottom: 0;
-    }
-
-    .contact-info-item h4 {
-        margin-bottom: 0.5rem;
-    }
-
-    .contact-info-item a {
-        color: var(--sage);
-        text-decoration: none;
-    }
-
-    .contact-info-item a:hover {
-        text-decoration: underline;
-    }
-
-    .contact-info-item p {
-        color: #666;
-        font-size: 0.875rem;
-        margin: 0;
-    }
-
-    .contact-form {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .form-input,
-    .form-select,
-    .form-textarea {
-        padding: 0.875rem;
-        border: 1.5px solid #e0e0e0;
-        border-radius: 0.5rem;
-        font-family: inherit;
-        font-size: 1rem;
-        transition: all 0.3s ease;
-        background-color: #fafafa;
-    }
-
-    .form-input:focus,
-    .form-select:focus,
-    .form-textarea:focus {
-        outline: none;
-        border-color: var(--sage);
-        background-color: white;
-        box-shadow: 0 0 0 4px rgba(107, 142, 107, 0.1);
-    }
-
-    .form-textarea {
-        resize: vertical;
-    }
-
-    .form-submit {
-        padding: 0.875rem;
-        background-color: var(--sage);
-        color: white;
         border: none;
         border-radius: 0.5rem;
-        font-weight: 700;
+        font-weight: 600;
         cursor: pointer;
-        transition: all 0.3s ease;
-        font-size: 1.05rem;
-        font-family: 'Inter', sans-serif;
-        box-shadow: 0 4px 12px rgba(107, 142, 107, 0.25);
+        transition: all 0.3s;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1rem;
     }
 
-    .form-submit:hover {
-        background-color: #5a7a5a;
-        box-shadow: 0 8px 20px rgba(107, 142, 107, 0.35);
-        transform: translateY(-2px);
+    .cta-button:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+        transform: scale(1.05);
     }
 
-    .form-submit:active {
-        transform: translateY(0);
-    }
-
-    .success-message {
-        display: none;
-        background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
-        color: #155724;
-        padding: 1.25rem;
-        border-radius: 0.5rem;
-        text-align: center;
-        margin-top: 1.5rem;
-        border: 1.5px solid #a8d8a8;
-        font-weight: 500;
-    }
-
-    .success-message.show {
-        display: block;
+    .cta-button:active {
+        transform: scale(0.98);
     }
 
     /* Footer */
@@ -867,6 +661,117 @@
         color: #999;
     }
 
+    /* Contact Form Styles */
+    .contact-section {
+        background-color: white;
+        padding: 3rem 1rem;
+    }
+
+    .contact-container {
+        max-width: 32rem;
+        margin: 0 auto;
+    }
+
+    .contact-info-box {
+        background: white;
+        border-radius: 0.5rem;
+        padding: 2rem;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        margin-bottom: 2rem;
+    }
+
+    .contact-info-item {
+        margin-bottom: 2rem;
+    }
+
+    .contact-info-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .contact-info-item h4 {
+        margin-bottom: 0.5rem;
+    }
+
+    .contact-info-item a {
+        color: var(--sage);
+        text-decoration: none;
+    }
+
+    .contact-info-item a:hover {
+        text-decoration: underline;
+    }
+
+    .contact-info-item p {
+        color: #666;
+        font-size: 0.875rem;
+        margin: 0;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+        border-radius: 0.5rem;
+        font-family: inherit;
+        font-size: 1rem;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+        outline: none;
+        border-color: var(--sage);
+        box-shadow: 0 0 0 3px rgba(107, 142, 107, 0.1);
+    }
+
+    .form-textarea {
+        resize: vertical;
+    }
+
+    .form-submit {
+        width: 100%;
+        padding: 0.75rem;
+        background-color: var(--sage);
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-size: 1rem;
+    }
+
+    .form-submit:hover {
+        opacity: 0.9;
+        box-shadow: 0 10px 25px rgba(107, 142, 107, 0.2);
+    }
+
+    .form-submit:active {
+        transform: scale(0.98);
+    }
+
+    .success-message {
+        display: none;
+        background-color: #d4edda;
+        color: #155724;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        text-align: center;
+        margin-top: 1rem;
+        border: 1px solid #c3e6cb;
+    }
+
+    .success-message.show {
+        display: block;
+    }
+
     /* Animations */
     @keyframes fadeIn {
         from {
@@ -926,11 +831,15 @@
 
 </head>
 <body>
+    <!-- ========================================
+         CONTACT INFORMATION - UPDATE ONLY HERE!
+         ======================================== -->
     <script>
+        // UPDATE YOUR INFORMATION HERE (Only place you need to change!)
         const CONTACT_INFO = {
-            whatsappNumber: '27665591392',
+            whatsappNumber: '27665591392',  // Just the numbers, no spaces or +
             email: 'info@havenhausco.co.za',
-            formEmail: 'info@havenhausco.co.za'
+            formEmail: 'info@havenhausco.co.za'  // Where form submissions go
         };
     </script>
 
@@ -945,8 +854,9 @@
         <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
             <a href="#about">About</a>
-            <a href="#contact" class="btn btn-primary">Get Quote</a>
+            <a href="#contact" class="btn-primary">Get Quote</a>
         </div>
     </div>
 </nav>
@@ -959,8 +869,8 @@
             <p>Seamless guest-ready experiences for short-term rental hosts. Hotel-grade cleaning, expert management, and hospitality excellence.</p>
             
             <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Request a Quote</a>
-                <button id="whatsappBtn" class="btn btn-secondary" type="button">WhatsApp Us</button>
+                <a href="#contact" class="btn-primary">Request a Quote</a>
+                <button id="whatsappBtn" class="btn-secondary" type="button">WhatsApp Us</button>
             </div>
 
             <div class="trust-signals">
@@ -993,40 +903,6 @@
     </div>
 </section>
 
-<!-- Services Section -->
-<section class="services" id="services">
-    <div class="services-container">
-        <h2>Our Core Services</h2>
-        
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Essential Turnover Clean</h3>
-                <div class="price">From R500</div>
-                <p>Routine guest turnover cleaning with guest-ready finishing touches.</p>
-                <a href="#" onclick="selectService('essential'); return false;">Learn more →</a>
-            </div>
-
-            <div class="service-card">
-                <h3>Premium Refresh Clean</h3>
-                <div class="price">From R900</div>
-                <p>Enhanced detailing with appliance sanitisation and deeper kitchen work.</p>
-                <a href="#" onclick="selectService('premium'); return false;">Learn more →</a>
-            </div>
-
-            <div class="service-card">
-                <h3>Signature Deep Clean</h3>
-                <div class="price">From R1500</div>
-                <p>Comprehensive property reset and luxury restoration for premium properties.</p>
-                <a href="#" onclick="selectService('deep'); return false;">Learn more →</a>
-            </div>
-        </div>
-
-        <div style="text-align: center; margin-top: 2rem;">
-            <a href="#contact" class="btn btn-primary">View All Services</a>
-        </div>
-    </div>
-</section>
-
 <!-- Trust Section -->
 <section class="trust-section">
     <div class="trust-content">
@@ -1045,54 +921,36 @@
     </div>
 </section>
 
-<!-- About Section -->
-<section class="about" id="about">
-    <div class="about-container">
-        <h2>About Haven Haus</h2>
+<!-- Services Section -->
+<section class="services" id="services">
+    <div class="services-container">
+        <h2>Our Core Services</h2>
         
-        <div class="about-content">
-            <p>Haven Haus was founded in 2025 as a luxury property management and turnover cleaning service based in Cape Town. We specialize in creating seamless guest-ready experiences for short-term rental hosts, bringing hotel-grade standards and hospitality excellence to every property we manage.</p>
-            <p>Our mission is to take the stress out of property management by providing consistent, reliable, and professional service that allows hosts to focus on growth while we ensure their properties remain immaculate and guest-ready.</p>
-            <p>With support for over 50 Airbnb properties across Cape Town, we've built our reputation on attention to detail, fast turnaround times, and seamless communication through a WhatsApp-first approach.</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Essential Turnover Clean</h3>
+                <div class="price">From R500</div>
+                <p>Routine guest turnover cleaning with guest-ready finishing touches.</p>
+                <a href="#contact">Learn more →</a>
+            </div>
+
+            <div class="service-card">
+                <h3>Premium Refresh Clean</h3>
+                <div class="price">From R900</div>
+                <p>Enhanced detailing with appliance sanitisation and deeper kitchen work.</p>
+                <a href="#contact">Learn more →</a>
+            </div>
+
+            <div class="service-card">
+                <h3>Signature Deep Clean</h3>
+                <div class="price">From R1500</div>
+                <p>Comprehensive property reset and luxury restoration for premium properties.</p>
+                <a href="#contact">Learn more →</a>
+            </div>
         </div>
 
-        <!-- About Owner Section -->
-        <div class="about-owner">
-            <h3>About Our Founder</h3>
-            
-            <div class="owner-card">
-                <div class="owner-credentials">
-                    <div class="credential">
-                        <span class="credential-title">Education</span>
-                        <p>UCT B.Com Economics & Finance Graduate - A solid foundation in financial planning and business management that drives our operational excellence.</p>
-                    </div>
-
-                    <div class="credential">
-                        <span class="credential-title">Top Communicator</span>
-                        <p>Top Learner for Professional Communication at UCT 2023 Class - Recognized for exceptional communication skills, crucial for our WhatsApp-first service approach.</p>
-                    </div>
-
-                    <div class="credential">
-                        <span class="credential-title">Hospitality Experience</span>
-                        <p><strong>University of Cape Town (UCT)</strong> - Gained foundational experience in guest services and operations management.</p>
-                    </div>
-
-                    <div class="credential">
-                        <span class="credential-title">E-Commerce Expertise</span>
-                        <p><strong>Takealot & Mr D Foods</strong> - Developed expertise in logistics, operations, and customer satisfaction in fast-paced environments.</p>
-                    </div>
-
-                    <div class="credential">
-                        <span class="credential-title">Investment Management</span>
-                        <p><strong>Allan Gray</strong> - Learned asset management principles and meticulous attention to detail that we apply to property care.</p>
-                    </div>
-
-                    <div class="credential">
-                        <span class="credential-title">Our Philosophy</span>
-                        <p>Every property is treated like a luxury investment. We combine professional standards with genuine care, bringing our combined experience to every turnover and management task.</p>
-                    </div>
-                </div>
-            </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="#contact" class="btn-primary">View All Services</a>
         </div>
     </div>
 </section>
@@ -1188,7 +1046,7 @@
     <div class="cta-container">
         <h2>Ready to Transform Your Turnover Process?</h2>
         <p>Join 50+ property managers and hosts who trust Haven Haus for consistent, reliable, hotel-grade service.</p>
-        <a href="#contact" class="btn btn-primary">Get Started</a>
+        <a href="#contact" class="cta-button">Get Started</a>
     </div>
 </section>
 
@@ -1201,12 +1059,12 @@
         <div class="contact-info-box">
             <div class="contact-info-item">
                 <h4>Email</h4>
-                <a id="emailLink" href="mailto:info@havenhausco.co.za">info@havenhausco.co.za</a>
+                <a id="emailLink" href="#">info@havenhausco.co.za</a>
             </div>
 
             <div class="contact-info-item">
                 <h4>WhatsApp</h4>
-                <button id="whatsappBtnContact" class="btn btn-primary" type="button">Message on WhatsApp</button>
+                <button id="whatsappBtnContact" class="btn-secondary" type="button" style="width: 100%;">Message on WhatsApp</button>
             </div>
 
             <div class="contact-info-item">
@@ -1266,9 +1124,9 @@
         <div class="footer-section">
             <h3>Contact</h3>
             <ul>
-                <li><button id="whatsappBtnFooter" type="button" style="background: none; border: none; color: #bbb; cursor: pointer; padding: 0; font-size: 0.875rem; font-family: inherit;">WhatsApp</button></li>
-                <li><a id="emailLinkFooter" href="mailto:info@havenhausco.co.za">Email</a></li>
-                <li><p style="margin: 0; font-size: 0.875rem; color: #bbb;">Cape Town, South Africa</p></li>
+                <li><button id="whatsappBtnFooter" type="button" style="background: none; border: none; color: #bbb; text-decoration: none; cursor: pointer; padding: 0; font-size: 0.875rem;">WhatsApp</button></li>
+                <li><a id="emailLinkFooter" href="#">Email</a></li>
+                <li><p style="margin: 0;">Cape Town, South Africa</p></li>
             </ul>
         </div>
     </div>
@@ -1283,16 +1141,14 @@
 </footer>
 
 <script>
-    function selectService(serviceType) {
-        document.getElementById('service').value = serviceType;
-        setTimeout(() => {
-            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-        }, 100);
-    }
-
+    // ========================================
+    // INITIALIZATION - Sets up all links
+    // ========================================
     function initializeWebsite() {
+        // Set WhatsApp functionality
         const whatsappUrl = `https://wa.me/${CONTACT_INFO.whatsappNumber}`;
         
+        // WhatsApp buttons
         const whatsappButtons = [
             document.getElementById('whatsappBtn'),
             document.getElementById('whatsappBtnContact'),
@@ -1308,36 +1164,15 @@
             }
         });
 
-        const emailLink = document.getElementById('emailLink');
-        const emailLinkFooter = document.getElementById('emailLinkFooter');
-        
-        if (emailLink) emailLink.href = `mailto:${CONTACT_INFO.email}`;
-        if (emailLinkFooter) emailLinkFooter.href = `mailto:${CONTACT_INFO.email}`;
+        // Set email links
+        const emailUrl = `mailto:${CONTACT_INFO.email}`;
+        document.getElementById('emailLink').href = emailUrl;
+        document.getElementById('emailLinkFooter').href = emailUrl;
     }
 
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
-        const service = document.getElementById('service').value;
-        const message = document.getElementById('message').value;
-        
-        const subject = `New Quote Request from ${name}`;
-        const body = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AService: ${service}%0A%0AMessage:%0A${message}`;
-        
-        window.location.href = `mailto:${CONTACT_INFO.formEmail}?subject=${encodeURIComponent(subject)}&body=${body}`;
-        
-        const successMessage = document.getElementById('successMessage');
-        successMessage.classList.add('show');
-        
-        setTimeout(() => {
-            this.reset();
-            successMessage.classList.remove('show');
-        }, 2000);
-    });
-
+    // ========================================
+    // SMOOTH SCROLL
+    // ========================================
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
@@ -1354,11 +1189,5 @@
         });
     });
 
-    document.addEventListener('DOMContentLoaded', function() {
-        initializeWebsite();
-    });
-</script>
+    // ========================================​​​​​​​​​​​​​​​​
 ```
-
-</body>
-</html>
