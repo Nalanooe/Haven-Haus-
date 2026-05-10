@@ -484,7 +484,6 @@
 
         /* About Owner Section */
         .about-owner {
-            background-color: white;
             padding: 3rem 1rem;
         }
 
@@ -512,21 +511,15 @@
             color: var(--sage);
             margin-bottom: 2rem;
             text-align: center;
-            font-size: 1.5rem;
         }
 
         .qualification {
             margin-bottom: 2rem;
         }
 
-        .qualification:last-child {
-            margin-bottom: 0;
-        }
-
         .qualification h4 {
             color: var(--dark);
             margin-bottom: 0.5rem;
-            font-size: 1rem;
         }
 
         .qualification p {
@@ -534,6 +527,12 @@
             font-size: 0.95rem;
             line-height: 1.7;
             margin: 0;
+        }
+
+        .qualification-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--sage), transparent);
+            margin: 2rem 0;
         }
 
         /* Testimonials Section */
@@ -881,12 +880,15 @@
     </style>
 </head>
 <body>
-    <!-- CONTACT INFORMATION -->
+    <!-- ========================================
+         CONTACT INFORMATION - UPDATE ONLY HERE!
+         ======================================== -->
     <script>
+        // UPDATE YOUR INFORMATION HERE (Only place you need to change!)
         const CONTACT_INFO = {
-            whatsappNumber: '27665591392',
+            whatsappNumber: '27665591392',  // Just the numbers, no spaces or +
             email: 'info@havenhausco.co.za',
-            formEmail: 'info@havenhausco.co.za'
+            formEmail: 'info@havenhausco.co.za'  // Where form submissions go
         };
     </script>
 
@@ -939,383 +941,4 @@
                     <div class="visual-gradient"></div>
                     <div class="visual-border"></div>
                     <div class="visual-icon">
-                        <svg fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trust Section -->
-    <section class="trust-section">
-        <div class="trust-content">
-            <div class="trust-stat">
-                <div class="trust-stat-number">50+</div>
-                <div class="trust-stat-text">Airbnb properties managed</div>
-            </div>
-            <div class="trust-stat">
-                <div class="trust-stat-number">2025</div>
-                <div class="trust-stat-text">Founded in Cape Town</div>
-            </div>
-            <div class="trust-stat">
-                <div class="trust-stat-number">100%</div>
-                <div class="trust-stat-text">Hospitality-focused service</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="services-container">
-            <h2>Our Core Services</h2>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Essential Turnover Clean</h3>
-                    <div class="price">From R500</div>
-                    <p>Routine guest turnover cleaning with guest-ready finishing touches.</p>
-                    <a href="#contact">Learn more →</a>
-                </div>
-
-                <div class="service-card">
-                    <h3>Premium Refresh Clean</h3>
-                    <div class="price">From R900</div>
-                    <p>Enhanced detailing with appliance sanitisation and deeper kitchen work.</p>
-                    <a href="#contact">Learn more →</a>
-                </div>
-
-                <div class="service-card">
-                    <h3>Signature Deep Clean</h3>
-                    <div class="price">From R1500</div>
-                    <p>Comprehensive property reset and luxury restoration for premium properties.</p>
-                    <a href="#contact">Learn more →</a>
-                </div>
-            </div>
-
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="#contact" class="btn-primary">View All Services</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Section -->
-    <section class="why-choose">
-        <div class="why-choose-container">
-            <h2>Why Choose Haven Haus</h2>
-            
-            <div class="why-grid">
-                <div class="why-item">
-                    <div class="why-icon">
-                        <div class="why-icon-text">✓</div>
-                    </div>
-                    <div class="why-content">
-                        <h4>Reliability You Can Trust</h4>
-                        <p>Consistent, dependable service across all properties. Your guests arrive to perfectly prepared spaces, every time.</p>
-                    </div>
-                </div>
-
-                <div class="why-item">
-                    <div class="why-icon">
-                        <div class="why-icon-text">✓</div>
-                    </div>
-                    <div class="why-content">
-                        <h4>Hospitality-Grade Standards</h4>
-                        <p>Hotel-quality execution with attention to detail. We treat every property like a luxury residence.</p>
-                    </div>
-                </div>
-
-                <div class="why-item">
-                    <div class="why-icon">
-                        <div class="why-icon-text">✓</div>
-                    </div>
-                    <div class="why-content">
-                        <h4>Fast Turnaround Times</h4>
-                        <p>Quick, efficient turnover coordination. Minimize downtime between guests and maximize your bookings.</p>
-                    </div>
-                </div>
-
-                <div class="why-item">
-                    <div class="why-icon">
-                        <div class="why-icon-text">✓</div>
-                    </div>
-                    <div class="why-content">
-                        <h4>Seamless Communication</h4>
-                        <p>WhatsApp-first approach. Quick updates, easy scheduling, and transparent service delivery.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Owner Section -->
-    <section class="about-owner" id="about">
-        <div class="about-owner-container">
-            <h2>About the Owner</h2>
-            
-            <div class="about-owner-content">
-                <h3>Founder & Director</h3>
-                
-                <div class="qualification">
-                    <h4>UCT Bcom Economics and Finance Graduate</h4>
-                    <p>Class of 2023 - Professional Communications Top Learner</p>
-                </div>
-
-                <div class="qualification">
-                    <h4>Advanced Economics Education</h4>
-                    <p>UCT Advanced Micro and Macro Economics Teaching Assistant and Exam Marker</p>
-                </div>
-
-                <div class="qualification">
-                    <h4>Professional Experience</h4>
-                    <p>Previous roles include positions at Allan Gray, Takealot Group, Mr D, and University of Cape Town</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <div class="testimonials-container">
-            <h2>What Hosts Say</h2>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p>"Always reliable and extremely consistent. Guests always arrive to spotless apartments."</p>
-                    <div class="testimonial-divider"></div>
-                    <div class="testimonial-author">Airbnb Host</div>
-                    <div class="testimonial-location">Sea Point</div>
-                </div>
-
-                <div class="testimonial-card">
-                    <p>"Haven Haus has made managing my listings stress-free. Professional and responsive."</p>
-                    <div class="testimonial-divider"></div>
-                    <div class="testimonial-author">Property Manager</div>
-                    <div class="testimonial-location">Cape Town</div>
-                </div>
-
-                <div class="testimonial-card">
-                    <p>"The level of detail is exceptional. My guests consistently leave 5-star reviews about cleanliness."</p>
-                    <div class="testimonial-divider"></div>
-                    <div class="testimonial-author">Luxury Villa Owner</div>
-                    <div class="testimonial-location">Clifton</div>
-                </div>
-
-                <div class="testimonial-card">
-                    <p>"Fast turnarounds, communication is excellent. Highly recommend for serious hosts."</p>
-                    <div class="testimonial-divider"></div>
-                    <div class="testimonial-author">Airbnb Host</div>
-                    <div class="testimonial-location">Camps Bay</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="cta-container">
-            <h2>Ready to Transform Your Turnover Process?</h2>
-            <p>Join 50+ property managers and hosts who trust Haven Haus for consistent, reliable, hotel-grade service.</p>
-            <a href="#contact" class="cta-button">Get Started</a>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-        <div class="contact-container">
-            <h2 style="text-align: center;">Get in Touch</h2>
-            <p style="text-align: center; color: #666; margin-bottom: 2rem;">Ready to elevate your property management? Contact us today for a consultation or quote.</p>
-            
-            <div class="contact-info-box">
-                <div class="contact-info-item">
-                    <h4>Email</h4>
-                    <a id="emailLink" href="#">info@havenhausco.co.za</a>
-                </div>
-
-                <div class="contact-info-item">
-                    <h4>WhatsApp</h4>
-                    <button id="whatsappBtnContact" class="btn-secondary" type="button" style="width: 100%;">Message on WhatsApp</button>
-                </div>
-
-                <div class="contact-info-item">
-                    <h4>Location</h4>
-                    <p>Cape Town, South Africa</p>
-                </div>
-            </div>
-
-            <form id="contactForm" class="contact-form">
-                <input type="text" id="name" class="form-input" placeholder="Your Name" required>
-                <input type="email" id="email" class="form-input" placeholder="Your Email" required>
-                <input type="tel" id="phone" class="form-input" placeholder="Phone Number">
-                <select id="service" class="form-select" required>
-                    <option value="">Select Service Type</option>
-                    <option value="essential">Essential Turnover Clean</option>
-                    <option value="premium">Premium Refresh Clean</option>
-                    <option value="deep">Signature Deep Clean</option>
-                    <option value="guest">Guest Management</option>
-                </select>
-                <textarea id="message" class="form-textarea" placeholder="Tell us more about your needs..." rows="4"></textarea>
-                <button type="submit" class="form-submit">Send Request</button>
-                <div id="successMessage" class="success-message">
-                    ✓ Thank you! Your request has been sent to info@havenhausco.co.za. We'll contact you within 24 hours.
-                </div>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Haven Haus</h3>
-                <p>Luxury short-term rental operations partner in Cape Town. Creating hotel-grade guest experiences.</p>
-            </div>
-
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h3>Services</h3>
-                <ul>
-                    <li><a href="#services">Essential Turnover</a></li>
-                    <li><a href="#services">Premium Refresh</a></li>
-                    <li><a href="#services">Deep Clean</a></li>
-                    <li><a href="#services">Guest Management</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <ul>
-                    <li><button id="whatsappBtnFooter" type="button" style="background: none; border: none; color: #bbb; text-decoration: none; cursor: pointer; padding: 0; font-size: 0.875rem;">WhatsApp</button></li>
-                    <li><a id="emailLinkFooter" href="#">Email</a></li>
-                    <li><p style="margin: 0;">Cape Town, South Africa</p></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2025 Haven Haus Property Management. All rights reserved.</p>
-            <div style="display: flex; gap: 1.5rem;">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        function initializeWebsite() {
-            const whatsappUrl = `https://wa.me/${CONTACT_INFO.whatsappNumber}`;
-            
-            const whatsappButtons = [
-                document.getElementById('whatsappBtn'),
-                document.getElementById('whatsappBtnContact'),
-                document.getElementById('whatsappBtnFooter')
-            ];
-            
-            whatsappButtons.forEach(btn => {
-                if (btn) {
-                    btn.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        window.open(whatsappUrl, '_blank');
-                    });
-                }
-            });
-
-            const emailUrl = `mailto:${CONTACT_INFO.email}`;
-            document.getElementById('emailLink').href = emailUrl;
-            document.getElementById('emailLinkFooter').href = emailUrl;
-        }
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href !== '#') {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                }
-            });
-        });
-
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.service-card, .testimonial-card, .why-item').forEach(el => {
-            observer.observe(el);
-        });
-
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                service: document.getElementById('service').value,
-                message: document.getElementById('message').value,
-                timestamp: new Date().toISOString()
-            };
-
-            fetch(`https://formsubmit.co/${CONTACT_INFO.formEmail}`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: JSON.stringify({
-                    name: formData.name,
-                    email: formData.email,
-                    phone: formData.phone,
-                    service: formData.service,
-                    message: formData.message,
-                    timestamp: formData.timestamp
-                })
-            })
-            .then(response => {
-                if (response.ok) {
-                    document.getElementById('successMessage').classList.add('show');
-                    document.getElementById('contactForm').reset();
-                    
-                    setTimeout(() => {
-                        document.getElementById('successMessage').classList.remove('show');
-                    }, 5000);
-                } else {
-                    alert('Error sending form. Please try again.');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Error sending form. Please try again.');
-            });
-        });
-
-        window.addEventListener('load', initializeWebsite);
-        initializeWebsite();
-    </script>
-</body>
-</html>
+                        <svg fill="currentColor" viewBox="0 0​​​​​​​​​​​​​​​​
